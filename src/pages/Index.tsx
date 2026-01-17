@@ -9,6 +9,7 @@ import AwardsSection from "@/components/AwardsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import AutoScrollGallery from "@/components/AutoScrollGallery";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +40,7 @@ const Index = () => {
         <ExperienceSection />
         <EducationSection />
         <AwardsSection />
+        <AutoScrollGallery />
         <ContactSection />
         <Footer />
       </div>
