@@ -96,6 +96,7 @@ export default {
         "scale-in": "scale-in 0.5s ease-out forwards",
         "blur-in": "blur-in 0.8s ease-out forwards",
       },
+
     },
   },
   plugins: [require("tailwindcss-animate")],
