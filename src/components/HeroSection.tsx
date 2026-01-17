@@ -153,7 +153,7 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
-          iv className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary shadow-[0_0_40px_rgba(var(--primary-rgb),0.4),0_0_80px_rgba(var(--primary-rgb),0.2),inset_0_0_20px_rgba(var(--primary-rgb),0.1)]">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 glow-effect">
                  <img
                   src={profilePhoto}
                   alt="B S Ranjith"
