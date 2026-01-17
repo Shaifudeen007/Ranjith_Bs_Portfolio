@@ -130,33 +130,33 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-2 gap-4 lg:-mt-8"
+            className="grid grid-cols-2 gap-5 lg:-mt-8"
           >
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                initial={{ opacity: 0, y: 70, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
                 whileHover={{ y: -8, scale: 1.05 }}
                 className="card-elevated flex flex-col items-center text-center group cursor-default p-5"
               >
                 <motion.div 
-                  className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors"
+                  className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
                   animate={isInView ? { rotate: [0, 10, -10, 0] } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.15 }}
                 >
-                  <stat.icon className="text-primary" size={22} />
+                  <stat.icon className="text-primary" size={30} />
                 </motion.div>
                 <motion.span 
-                  className="stat-number text-gradient text-3xl font-bold"
+                  className="stat-number text-gradient text-5xl font-bold"
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ type: "spring", stiffness: 200, delay: 0.4 + index * 0.15 }}
                 >
                   <DecryptedText text={stat.value} />
                 </motion.span>
-                <span className="text-muted-foreground text-xs mt-1 font-medium">
+                <span className="text-muted-foreground text-1xl mt-1 font-medium">
                   {stat.label}
                 </span>
               </motion.div>

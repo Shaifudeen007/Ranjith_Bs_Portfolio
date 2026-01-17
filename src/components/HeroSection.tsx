@@ -1,41 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, Instagram } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
-import { useState, useEffect } from "react";
-
-const TypewriterText = ({ text }: { text: string }) => {
-  const [displayText, setDisplayText] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index <= text.length) {
-        setDisplayText(text.slice(0, index));
-        index++;
-      } else {
-        clearInterval(interval);
-        setTimeout(() => setShowCursor(false), 1000);
-      }
-    }, 100);
-    return () => clearInterval(interval);
-  }, [text]);
-
-  return (
-    <span className="inline-flex">
-      <span className="text-gradient">{displayText}</span>
-      {showCursor && (
-        <motion.span 
-          className="text-primary ml-1"
-          animate={{ opacity: [1, 0] }}
-          transition={{ duration: 0.5, repeat: Infinity }}
-        >
-          |
-        </motion.span>
-      )}
-    </span>
-  );
-};
+import ShinyText from "./ShinyText";
 
 const HeroSection = () => {
   return (
@@ -100,7 +66,14 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="hero-title mb-6"
             >
-              <TypewriterText text="B S Ranjith" />
+              <ShinyText 
+                text="B S Ranjith" 
+                speed={3}
+                spread={90}
+                yoyo={true}
+                delay={0.5}
+               className="text-black dark:text-white"
+              />
             </motion.h1>
 
             <motion.div
@@ -179,10 +152,10 @@ const HeroSection = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 glow-effect">
-                <img
+                 <img
                   src={profilePhoto}
                   alt="B S Ranjith"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[center_0%]"
                 />
               </div>
             </div>
