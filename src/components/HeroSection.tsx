@@ -66,13 +66,15 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="hero-title mb-6"
             >
-              <ShinyText 
+           <ShinyText 
                 text="B S Ranjith" 
                 speed={3}
                 spread={90}
                 yoyo={true}
                 delay={0.5}
-               className="text-black dark:text-white"
+                color="hsl(var(--foreground))"
+                shineColor="hsl(var(--primary))"
+                className=""
               />
             </motion.h1>
 
@@ -155,7 +157,7 @@ const HeroSection = () => {
                  <img
                   src={profilePhoto}
                   alt="B S Ranjith"
-                  className="w-full h-full object-cover object-[center_0%]"
+                  className="w-full h-full object-cover object-[center_-2%]"
                 />
               </div>
             </div>
